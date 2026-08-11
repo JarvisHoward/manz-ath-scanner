@@ -1,0 +1,12 @@
+{
+  "scanner_version": "2.0",
+  "candidate_count": 8,
+  "input": "daily_ohlcv.csv",
+  "outputs": [
+    "candidates.csv",
+    "hermes_candidates.json",
+    "trade_plan.pdf"
+  ],
+  "minimum_reward_to_risk": 1.0,
+  "target_policy": "support/resistance and Fibonacci confluence; no fixed R target"
+}

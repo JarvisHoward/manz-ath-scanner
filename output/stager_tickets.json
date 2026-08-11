@@ -1,0 +1,60 @@
+{
+  "trade_date": "2026-08-10",
+  "around_the_horn": [
+    {
+      "symbol": "ANET",
+      "setup": "Infield Fly Short",
+      "entry": 187.4,
+      "direction": "Short",
+      "stop": 198.1,
+      "target_50": 179.98,
+      "target": 172.56,
+      "sector_symbol": "$XLK",
+      "sector_name": "Technology",
+      "pattern": "Infield Fly Short",
+      "description": "ARISTA NETWORKS INC",
+      "resistance_2": 201.89,
+      "resistance_1": 195.28,
+      "pivot": 191.39,
+      "support_1": 184.78,
+      "support_2": 180.89
+    },
+    {
+      "symbol": "AMD",
+      "setup": "Infield Fly Short",
+      "entry": 475.96,
+      "direction": "Short",
+      "stop": 499.09,
+      "target_50": 456.6,
+      "target": 437.23,
+      "sector_symbol": "$XLK",
+      "sector_name": "Technology",
+      "pattern": "Infield Fly Short",
+      "description": "ADVANCED MICRO DEVIC",
+      "resistance_2": 509.07,
+      "resistance_1": 496.21,
+      "pivot": 486.14,
+      "support_1": 473.28,
+      "support_2": 463.21
+    },
+    {
+      "symbol": "PANW",
+      "setup": "Infield Fly Short",
+      "entry": 359.05,
+      "direction": "Short",
+      "stop": 370.6,
+      "target_50": 352.94,
+      "target": 346.83,
+      "sector_symbol": "$XLK",
+      "sector_name": "Technology",
+      "pattern": "Infield Fly Short",
+      "description": "PALO ALTO NETWORKS I",
+      "resistance_2": 375.85,
+      "resistance_1": 369.86,
+      "pivot": 364.5,
+      "support_1": 358.51,
+      "support_2": 353.15
+    }
+  ],
+  "stocks_to_watch": []
+}
