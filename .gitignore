@@ -1,2 +1,11 @@
 __pycache__/
 *.pyc
+
+# Regenerable market-data pulls (~9MB each, one per run). The canonical
+# daily_ohlcv.csv is tracked; dated snapshots are re-fetchable from the source.
+daily_ohlcv_*.csv
+data_manifest_*.json
+
+# Per-run scan output decks (large, regenerable)
+nightly_output/
+output_*/
