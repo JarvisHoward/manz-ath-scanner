@@ -1703,6 +1703,26 @@ def run(input_path: Path | None, output_dir: Path, config: ScanConfig, demo: boo
         candidates.sort(key=lambda item: (-item.score, -item.target_rr, item.symbol))
 
     if top_n is not None and top_n > 0:
+        # Collapse same-symbol candidates BEFORE trimming so top_n means
+        # top_n DISTINCT tradable symbols. One symbol can qualify under two
+        # patterns on the same bar (e.g. WBD as "Fast Ball Long" and
+        # "Line Drive Gap Long"); without this, a single name eats two slots
+        # and the deck silently loses a distinct candidate.
+        #
+        # The stager keys position state and its deterministic OCA group by
+        # SYMBOL, so two rows for one symbol would also open a DOUBLE position
+        # under one OCA group. Keep the first (highest-ranked) occurrence.
+        deduped = []
+        seen_symbols = set()
+        for item in candidates:
+            if item.symbol in seen_symbols:
+                continue
+            seen_symbols.add(item.symbol)
+            deduped.append(item)
+        if len(deduped) < len(candidates):
+            print(f"Collapsed {len(candidates) - len(deduped)} same-symbol duplicate(s)")
+        candidates = deduped
+
         trimmed = len(candidates) > top_n
         candidates = candidates[:top_n]
         if trimmed:
